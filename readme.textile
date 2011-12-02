@@ -13,10 +13,12 @@ h3. Running Batch Files as Azure Startup Tasks
 The recommended approach for using these scripts is to include them as "Windows Azure Startup Tasks":"http://msdn.microsoft.com/en-us/library/windowsazure/gg456327.aspx" in your @ServiceDefinition.csdef@ file.
 
 The syntax looks like this:
-<pre><Startup>
+<pre>
+<Startup>
     <Task commandLine="[parent folder]\upgradeIISthreadcount.cmd" executionContext="elevated" taskType="background" />
     <Task commandLine="[parent folder]\disableAppPoolTimeout.cmd" executionContext="elevated" taskType="background" />
-</Startup></pre>
+</Startup>
+</pre>
 
 All of these batch files in particular should run under @executionContext="elevated"@ which gives them the ability to be executed with administrator permissions.
 
