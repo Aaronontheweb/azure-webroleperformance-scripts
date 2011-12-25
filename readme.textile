@@ -16,12 +16,14 @@ The recommended approach for using these scripts is to include them as "Windows 
 
 The syntax looks like this:
 
+<pre>
 <code>
     <Startup>
        <Task commandLine="[parent folder]\upgradeIISthreadcount.cmd" executionContext="elevated" taskType="background" />
         <Task commandLine="[parent folder]\disableAppPoolTimeout.cmd" executionContext="elevated" taskType="background" />
     </Startup>
 </code>
+</pre>
 
 All of these batch files in particular should run under @executionContext="elevated"@ which gives them the ability to be executed with administrator permissions.
 
