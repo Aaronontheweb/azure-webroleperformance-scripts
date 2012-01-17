@@ -7,6 +7,7 @@ h3. Inventory of Scripts
 @upgradeIISthreadcount.cmd@ - upgrades the number of the available threads for emptying the IIS request queue and increases the number of available connections per CPU.
 @disableAppPoolTimeout.cmd@ - disables the AppPool timeout recycle in IIS, which helps improve the performance of lower-traffic applications.
 @logIISthreadcount.cmd@ - logs the settings which are modified by @upgradeIISthreadcount.cmd@ - can be modified to log other sections of @machine.config@ as well.
+@setMaxProcessesToAvailableProcessors.cmd@ - sets the number of @MaxProcesses@ for default app pools in IIS equal to the number of available physical processors on a machine. This is particularly useful for non-ASP.NET content types like Node.JS.
 
 h3. Running Batch Files as Azure Startup Tasks
 
